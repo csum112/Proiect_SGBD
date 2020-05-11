@@ -16,6 +16,23 @@ CREATE TABLE RASPUNSURI(
   CORECT VARCHAR2(1)
 );
 
+CREATE TABLE TEST_QA
+(
+    ID     NUMBER(10),
+    ID_A   Varchar2(8),
+    ANSWER VARCHAR2(1),
+    SALT   NUMBER(1),
+    CONSTRAINT FK_IDA FOREIGN KEY (ID_A) REFERENCES RASPUNSURI (ID)
+);
+
+CREATE TABLE TESTE
+(
+    EMAIL        varchar2(64),
+    NR_INTREBARE number(2)   NOT NULL,
+    ID_Q         varchar2(8) not null,
+    ID_QA        number(10)  not null
+);
+
 
 -- Domeniul 1 (geometrie)
 INSERT INTO INTREBARI VALUES('D1','Q1','Care din urmatoarele figur geometrice au 4 laturi ?');
