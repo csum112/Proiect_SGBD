@@ -1,3 +1,3 @@
 FROM wnameless/oracle-xe-11g-r2
-COPY ./init_scripts /init_scripts
+COPY ./scripts.sql /scripts.sql
 COPY ./init_db.sh /docker-entrypoint-initdb.d/
