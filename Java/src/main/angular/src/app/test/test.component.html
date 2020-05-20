@@ -1,0 +1,20 @@
+<div class="w-100" *ngIf="qos | async as q">
+    <div class="container" *ngIf="q.questionId; else scoreT">
+        <div class="row">{{q.questionText}}</div>
+        <div
+                class="form-check"
+                *ngFor="let a of q.answerList"
+        >
+            <input type="checkbox" class="form-check-inline" [id]="a.id" [(ngModel)]="answers[a.id]">
+            <label [for]="a.id" class="form-check-label">{{a.text}}</label>
+        </div>
+        <div class="row pt-3">
+            <button class="btn btn-primary" (click)="submitAnswer()">Submit</button>
+        </div>
+    </div>
+    <ng-template #scoreT>
+        <div class="container">
+            Felicitari! Ai luat {{q.score}} puncte!
+        </div>
+    </ng-template>
+</div>
