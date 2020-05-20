@@ -30,6 +30,12 @@ create type QUESTION_RESPONE AS OBJECT
 )
 /
 
+create table EMAIL_HASH_COMBO(
+    EMAIL VARCHAR2(256),
+    HASH VARCHAR2(256)
+)
+/
+
 create table INTREBARI
 (
     DOMENIU        VARCHAR2(5),
