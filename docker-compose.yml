@@ -2,6 +2,8 @@ version: "3.7"
 services:
     webapp:
         build: ./Java
+        enviroment:
+            TZ: "Europe/Bucharest"
         ports: 
             - "8080:8080"
         links: 
