@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+    webapp:
+        build: ./Java
+        ports: 
+            - "666:8080"
+        links: 
+            - "db:debian"
+    db:
+        build: ./DB
