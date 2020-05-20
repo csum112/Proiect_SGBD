@@ -7,4 +7,4 @@ WORKDIR /
 RUN rm -r /project
 EXPOSE 22
 EXPOSE 8080
-CMD ['java', '-jar', 'Proiect_SGBD.jar']
+CMD ["java", "-jar", "Proiect_SGBD.jar"]
